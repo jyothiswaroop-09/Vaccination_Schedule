@@ -115,18 +115,20 @@ http://127.0.0.1:5000/
 📩 Schedule saved at: outputs/optimized_schedule.csv
 ```
 ## Screenshots
-### Home Page
-![Home Page](outputs/screenshots/Home(1).png)
-
 ### Login Page
-![Home Page](outputs/screenshots/Home(1).png)
+![Login Page](outputs/screenshots/Login(1).png)
 
-### Todo Page
-![Home Page](outputs/screenshots/Home(1).png)
+### Home Page
+![Home Page](outputs/screenshots/Home(2).png)
 
-### Logout 
-![Home Page](outputs/screenshots/Home(1).png)
+### Selection Page
+![Selection Page](outputs/screenshots/Selection(3).png)
 
+### Values Page
+![Values Page](outputs/screenshots/Value(4).png)
+
+### Output Page
+![Output Page](outputs/screenshots/Output(5).png)
 ## Skills Demonstrated
 ```
 *AI/ML: Priority scoring, outbreak risk modeling, ML-based adjustments
