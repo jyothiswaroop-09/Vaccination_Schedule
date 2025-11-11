@@ -114,6 +114,18 @@ http://127.0.0.1:5000/
 🔹 Typhoid Vaccine on 2025-11-28 (Priority: 5.92)
 📩 Schedule saved at: outputs/optimized_schedule.csv
 ```
+## Screenshots
+### Home Page
+![Home Page](outputs/screenshots/Home(1).png)
+
+### Login Page
+![Home Page](outputs/screenshots/Home(1).png)
+
+### Todo Page
+![Home Page](outputs/screenshots/Home(1).png)
+
+### Logout 
+![Home Page](outputs/screenshots/Home(1).png)
 
 ## Skills Demonstrated
 ```
