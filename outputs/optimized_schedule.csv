@@ -1,5 +1,5 @@
 vaccine_name,date,priority
-Yellow Fever,2025-11-11,10.0
-Cholera Vaccine,2025-11-19,0.59
-Typhoid Vaccine,2025-12-02,0.39
-Rabies Vaccine,2025-12-14,0.38
+Japanese Encephalitis,2025-11-11,10.0
+Measles-Mumps-Rubella,2025-11-25,8.75
+Tetanus-Diphtheria-Pertussis,2025-12-02,8.71
+Rabies Vaccine,2025-12-13,8.26
