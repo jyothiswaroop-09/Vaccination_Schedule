@@ -1,0 +1,13 @@
+vaccine,vaccine_name,age_min,age_max,dose_interval_days,contraindications,recommended_for
+MMR,Measles-Mumps-Rubella,1,45,90,Severe allergy to gelatin,Global
+HepB,Hepatitis B,0,60,30,None,Global
+Influenza,Influenza (Flu Shot),0,100,365,Severe egg allergy,Hyderabad
+Tdap,Tetanus-Diphtheria-Pertussis,10,100,365,None,Global
+HPV,Human Papillomavirus,9,45,180,None,Global
+YellowFever,Yellow Fever,9,60,365,Severe egg allergy,Africa
+COVID19,COVID-19 Vaccine,5,100,90,None,Global
+Typhoid,Typhoid Vaccine,2,100,730,None,Asia
+Rabies,Rabies Vaccine,0,100,30,None,India
+JapaneseEncephalitis,Japanese Encephalitis,2,70,365,None,East Asia
+Cholera,Cholera Vaccine,2,70,365,None,South Asia
+Polio,Polio Vaccine,0,50,365,None,India

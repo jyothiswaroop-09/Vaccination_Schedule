@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vaccination Schedule Optimizer</title>
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            width: 200px; /* compact width */
+        }
+
+        .dropdown-btn {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            width: 100%;
+            max-height: 150px;
+            overflow-y: auto;
+            z-index: 1;
+        }
+
+        .dropdown-content label {
+            display: block;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .dropdown-content label:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧠 Vaccination Schedule Optimizer</h1>
+    <form method="POST">
+        <label>Age:</label>
+        <input type="number" name="age" required><br><br>
+
+        <!-- Health Conditions Dropdown -->
+        <label>Health Conditions:</label>
+        <div class="dropdown" style="display:inline-block; margin-left:10px;">
+            <div class="dropdown-btn" onclick="toggleDropdown('healthDropdown')">Select</div>
+            <div id="healthDropdown" class="dropdown-content">
+                <label><input type="radio" name="health_conditions" value="fever"> Fever</label>
+                <label><input type="radio" name="health_conditions" value="asthma"> Asthma</label>
+                <label><input type="radio" name="health_conditions" value="diabetes"> Diabetes</label>
+                <label><input type="radio" name="health_conditions" value="allergy"> Allergy</label>
+                <label><input type="radio" name="health_conditions" value="none" checked> None</label>
+            </div>
+        </div>
+        <br><br>
+
+        <!-- Travel Destinations Text Input -->
+        <label>Travel Destinations (comma-separated, if any):</label>
+        <input type="text" name="travel_plans" value=""><br><br>
+
+        <label>Current Location (city):</label>
+        <input type="text" name="location" required><br><br>
+
+        <button type="submit">Generate Schedule</button>
+    </form>
+
+    {% if schedule %}
+        <h2>✅ Vaccination Schedule:</h2>
+        <ul>
+        {% for v in schedule %}
+            <li>🔹 {{ v.vaccine_name }} on {{ v.date }} (Priority: {{ "%.2f"|format(v.priority) }})</li>
+        {% endfor %}
+        </ul>
+        <p>📩 Schedule saved at: outputs/optimized_schedule.csv</p>
+    {% endif %}
+
+    <script>
+        function toggleDropdown(id) {
+            var dropdown = document.getElementById(id);
+            dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+        }
+
+        // Update dropdown button text when a health condition is selected
+        var radios = document.getElementsByName("health_conditions");
+        radios.forEach(function(radio) {
+            radio.addEventListener("change", function() {
+                document.querySelector('.dropdown-btn').innerText = this.nextSibling.textContent.trim();
+                document.getElementById('healthDropdown').style.display = 'none'; // close dropdown
+            });
+        });
+
+        // Close dropdown if clicked outside
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown-btn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    dropdowns[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
